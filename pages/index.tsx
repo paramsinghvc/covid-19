@@ -64,7 +64,6 @@ const Home = ({ data, totalData }: any) => {
       if (obj) {
         setSeletedCountry(obj);
       }
-      console.log(obj);
     };
     polygonSeries.mapPolygons.template.events.on("hit", hitHandler);
 
@@ -306,7 +305,7 @@ const Home = ({ data, totalData }: any) => {
           main {
             padding: 0;
             width: 100vw;
-            height: 60vh;
+            height: 55vh;
           }
 
           @media (max-width: 600px) {
@@ -356,7 +355,6 @@ export async function fetchTotalData() {
 export async function getStaticProps() {
   const casesJSONData = await fetchCasesData();
   const totalJSONData = await fetchTotalData();
-  console.log(totalJSONData);
   return {
     props: {
       data: getCasesData(casesJSONData),
