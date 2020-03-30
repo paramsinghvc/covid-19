@@ -299,7 +299,7 @@ const Home = ({ data, totalData }: any) => {
           }
           .container {
             min-height: 100vh;
-            padding: 0 0.5rem;
+            padding: 0;
           }
 
           main {
